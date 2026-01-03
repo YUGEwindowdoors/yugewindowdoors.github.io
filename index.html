@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Your Store Name】- Aluminum Doors & Windows Exhibition</title>
+    <style>
+        /* 全局样式：简洁风格，适配移动端和桌面端 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 头部：LOGO + 门店名称 */
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-container {
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .store-logo {
+            width: 120px; /* LOGO宽度，可自行调整 */
+            height: auto; /* 保持宽高比，不拉伸 */
+        }
+
+        .store-name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        /* 主体容器：居中布局，限制最大宽度 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 店铺位置模块 */
+        .store-location {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            display: inline-block;
+        }
+
+        .location-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .location-map {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            border-radius: 6px;
+            border: 1px solid #eee;
+        }
+
+        .location-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .location-info p {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .location-info strong {
+            color: #2c3e50;
+        }
+
+        /* PDF展示模块 */
+        .pdf-gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+        }
+
+        .pdf-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .pdf-card {
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 20px;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .pdf-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .pdf-preview {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            object-fit: contain; /* 保持PDF预览图比例，不拉伸 */
+        }
+
+        .pdf-name {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* 底部版权信息 */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部：LOGO + 门店名称 -->
+    <header>
+        <div class="logo-container">
+            <!-- 【需要你替换1】：门店LOGO图片 -->
+            <!-- 替换说明：
+                1. 准备你的门店LOGO图片（推荐格式：png/jpg/webp，尺寸建议：240px*240px以内，保证清晰）
+                2. 将图片文件放在和index.html同级的目录下（或创建images文件夹存放，需修改src路径，例如：src="images/your-logo.png"）
+                3. 替换下面src属性中的 "your-store-logo.png" 为实际图片文件名+路径
+                4. alt属性替换为你的门店英文名称，用于图片加载失败时的提示
+            -->
+            <img src="your-store-logo.png" alt="【Your Store Name】LOGO" class="store-logo">
+        </div>
+        <!-- 【需要你替换2】：门店英文名称 -->
+        <h1 class="store-name">Aluminum Doors & Windows Professional Store</h1>
+    </header>
+
+    <div class="container">
+        <!-- 店铺位置模块 -->
+        <section class="store-location">
+            <h2 class="section-title">Store Location</h2>
+            <div class="location-content">
+                <!-- 【需要你替换3】：店铺地图图片/嵌入地图 -->
+                <!-- 替换说明（两种方式可选，推荐方式2更直观）：
+                方式1（静态地图图片）：
+                    1. 截图你的店铺在Google Maps/高德/百度地图上的位置图
+                    2. 保存图片（推荐png/jpg），放在对应目录
+                    3. 替换src属性中的 "your-store-map.png" 为实际图片路径
+                方式2（嵌入可交互地图）：
+                    1. 前往Google Maps/百度地图开放平台/高德地图开放平台，获取店铺地图嵌入代码
+                    2. 删除下面的img标签，替换为平台提供的iframe嵌入代码
+                    3. 调整iframe的width和height，保持和当前样式适配（max-width:600px; height:300px）
+                -->
+                <img src="your-store-map.png" alt="Store Location Map" class="location-map">
+
+                <div class="location-info">
+                    <!-- 【需要你替换4】：店铺详细英文信息 -->
+                    <p><strong>Detailed Address:</strong> No.XX, XX Street, XX District, XX City, XX Province</p>
+                    <p><strong>Contact Phone:</strong> +86 138 XXXX 1234</p>
+                    <p><strong>Business Hours:</strong> Monday to Sunday 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PDF展示与下载模块（按产品分类：铝合金门、铝合金窗、木门、智能锁、酒店锁） -->
+        <section class="pdf-gallery">
+            <h2 class="section-title">Product & Document PDF Gallery</h2>
+            <div class="pdf-container">
+                <!-- 1. 铝合金门（Aluminum Doors） -->
+                <div class="pdf-card">
+                    <!-- 【需要你替换5】：PDF预览图（对应铝合金门） -->
+                    <img src="aluminum-doors-preview.png" alt="Aluminum Doors Product Parameters" class="pdf-preview">
+                    <h3 class="pdf-name">Aluminum Doors - Product Parameters & Quotation</h3>
+                    <!-- 【需要你替换6】：PDF下载文件路径（对应铝合金门） -->
+                    <a href="aluminum-doors.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <!-- 2. 铝合金窗（Aluminum Windows） -->
+                <div class="pdf-card">
+                    <img src="aluminum-windows-preview.png" alt="Aluminum Windows Product Catalog" class="pdf-preview">
+                    <h3 class="pdf-name">Aluminum Windows - Catalog & Cases</h3>
+                    <a href="aluminum-windows.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <!-- 3. 木门（Wooden Doors） -->
+                <div class="pdf-card">
+                    <img src="wooden-doors-preview.png" alt="Wooden Doors Product Introduction" class="pdf-preview">
+                    <h3 class="pdf-name">Wooden Doors - Material & Price List</h3>
+                    <a href="wooden-doors.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <!-- 4. 智能锁（Smart Locks） -->
+                <div class="pdf-card">
+                    <img src="smart-locks-preview.png" alt="Smart Locks Product Manual" class="pdf-preview">
+                    <h3 class="pdf-name">Smart Locks - Installation & Operation Guide</h3>
+                    <a href="smart-locks.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <!-- 5. 酒店锁（Hotel Locks） -->
+                <div class="pdf-card">
+                    <img src="hotel-locks-preview.png" alt="Hotel Locks Product Solution" class="pdf-preview">
+                    <h3 class="pdf-name">Hotel Locks - Whole Hotel Solution & Quotation</h3>
+                    <a href="hotel-locks.pdf" class="download-btn" download>Download PDF</a>
+                </div>
+
+                <!-- 【可选】：如需增加更多PDF，复制上面的<div class="pdf-card">...</div>模块，替换对应预览图和PDF文件路径即可 -->
+            </div>
+        </section>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <p>© 2026 【Your Store Name】 All Rights Reserved - Hosted on GitHub Pages</p>
+    </footer>
+</body>
+</html>
